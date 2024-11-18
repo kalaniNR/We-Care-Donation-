@@ -1,0 +1,85 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="final_project.Site1" %>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>WE CARE</title>
+
+    <%-- Bootstrap CSS  --%>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+    <%-- DataTable CSS --%>
+    <link href="Data_table/css/dataTables.dataTables.min.css" rel="stylesheet" />
+
+    <%-- FontAwesome CSS --%>
+    <link href="font/css/all.css" rel="stylesheet" />
+
+    <%-- my CSS --%>
+    <link href="my_css/footer.css" rel="stylesheet" />
+    <link href="my_css/home.css" rel="stylesheet" />
+    <link href="my_css/banner.css" rel="stylesheet" />
+    <script src="my_css/banner.js"></script>
+    <%--my css part 2--%>
+    
+
+
+
+    <%--cnd link--%>
+    
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <!-- navigation bar eka -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">
+                <img src="images/icons8-library-50.png" width="30" height="30" alt="Donation site" />
+                WE CARE DONATION
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="home_page.aspx">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="user_sign_up.aspx">Sign-Up</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="user_logging.aspx">Log-In</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="reg_log.aspx">Register</a>
+                    </li>
+                       <li class="nav-item">
+                        <a class="nav-link" href="admin_log.aspx">Administrator</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- body eka -->
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+
+        <!-- Foter eka -->
+        <footer class="footer text-center py-4">
+            <p>&copy; All rights reserved</p>
+            <asp:LinkButton ID="LinkButton1" runat="server" CssClass="footer-link" OnClick="LinkButton1_Click1">Privacy Policy</asp:LinkButton>
+            <asp:LinkButton ID="LinkButton2" runat="server" CssClass="footer-link">Terms of Service</asp:LinkButton>
+            <asp:LinkButton ID="LinkButton3" runat="server" CssClass="footer-link">Contact</asp:LinkButton>
+        </footer>
+    </form>
+
+  
+</body>
+</html>
